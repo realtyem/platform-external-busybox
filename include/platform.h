@@ -231,7 +231,7 @@ typedef uint32_t bb__aliased_uint32_t FIX_ALIASING;
 # define move_from_unaligned32(v, u32p) (memcpy(&(v), (u32p), 4))
 # define move_to_unaligned16(u16p, v) do { \
 	uint16_t __t = (v); \
-	memcpy((u16p), &__t, 4); \
+	memcpy((u16p), &__t, sizeof(uint16_t)); \
 } while (0)
 # define move_to_unaligned32(u32p, v) do { \
 	uint32_t __t = (v); \
@@ -338,6 +338,12 @@ typedef unsigned smalluint;
 
 #if defined(__CYGWIN__)
 # define MAXSYMLINKS SYMLOOP_MAX
+#endif
+
+#if defined(ANDROID) || defined(__ANDROID__)
+# define BB_ADDITIONAL_PATH ":/system/sbin:/system/bin:/system/xbin"
+# define SYS_ioprio_set __NR_ioprio_set
+# define SYS_ioprio_get __NR_ioprio_get
 #endif
 
 
