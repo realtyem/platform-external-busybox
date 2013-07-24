@@ -59,6 +59,7 @@
 /bin/free
 /sbin/freeramdisk
 /bin/fsync
+/bin/fstrim
 /bin/ftpget
 /bin/ftpput
 /bin/fuser
