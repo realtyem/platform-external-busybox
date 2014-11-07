@@ -59,11 +59,11 @@
 /*
  * This is from linux/include/net/ipv6.h
  */
-struct in6_ifreq {
+/*struct in6_ifreq {
 	struct in6_addr ifr6_addr;
 	uint32_t ifr6_prefixlen;
 	unsigned int ifr6_ifindex;
-};
+};*/
 # endif
 #endif /* HAVE_AFINET6 */
 

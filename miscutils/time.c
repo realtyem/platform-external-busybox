@@ -18,6 +18,8 @@
 #include "libbb.h"
 #include <sys/resource.h> /* getrusage */
 
+#define wait3(status, options, rusage) wait4(-1, status, options, rusage)
+
 /* Information on the resources used by a child process.  */
 typedef struct {
 	int waitstatus;
