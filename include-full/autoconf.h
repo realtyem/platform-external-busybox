@@ -2,7 +2,7 @@
  * Automatically generated C config: don't edit
  * Busybox version: 1.21.1-jb
  */
-#define AUTOCONF_TIMESTAMP "2013-07-25 21:23 +0100"
+#define AUTOCONF_TIMESTAMP "2014-11-20 15:30 +0100"
 
 #define CONFIG_HAVE_DOT_CONFIG 1
 #define ENABLE_HAVE_DOT_CONFIG 1
@@ -2540,14 +2540,14 @@
 #define ENABLE_STRINGS 1
 #define IF_STRINGS(...) __VA_ARGS__
 #define IF_NOT_STRINGS(...)
-#define CONFIG_TASKSET 1
-#define ENABLE_TASKSET 1
-#define IF_TASKSET(...) __VA_ARGS__
-#define IF_NOT_TASKSET(...)
-#define CONFIG_FEATURE_TASKSET_FANCY 1
-#define ENABLE_FEATURE_TASKSET_FANCY 1
-#define IF_FEATURE_TASKSET_FANCY(...) __VA_ARGS__
-#define IF_NOT_FEATURE_TASKSET_FANCY(...)
+#undef CONFIG_TASKSET
+#define ENABLE_TASKSET 0
+#define IF_TASKSET(...)
+#define IF_NOT_TASKSET(...) __VA_ARGS__
+#undef CONFIG_FEATURE_TASKSET_FANCY
+#define ENABLE_FEATURE_TASKSET_FANCY 0
+#define IF_FEATURE_TASKSET_FANCY(...)
+#define IF_NOT_FEATURE_TASKSET_FANCY(...) __VA_ARGS__
 #define CONFIG_TIME 1
 #define ENABLE_TIME 1
 #define IF_TIME(...) __VA_ARGS__

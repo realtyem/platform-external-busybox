@@ -27,6 +27,8 @@
 #include <sched.h>
 #include "libbb.h"
 
+#define _GNU_SOURCE 1
+
 #if ENABLE_FEATURE_TASKSET_FANCY
 #define TASKSET_PRINTF_MASK "%s"
 /* craft a string from the mask */
